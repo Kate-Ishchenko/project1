@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e3030;
+}
+.main-page{
+    max-width: 100%;
+    height: 100vh;
+    background: url("img/title3.jpg") center no-repeat;
+    background-size: cover;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 7px;
+}
+.nav-item{
+    text-shadow: 2px 2px 2px #283440;
+}
+.logo-text{
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    transform: scale(1, 1.05);
+    text-shadow: 2px 2px 2px #283440;
+}
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    list-style: none;
+    color: white;
+    font-size: 14px;
+}
+.site-branding{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 180px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    border: thick double white;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+.fa-lemon{
+    color: white;
+    font-size: 80px;
+    text-shadow: 2px 2px 2px #283440;
+}
+.site-title{
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 53px;
+    color: white;
+    line-height: 150%;
+    transform: scale(1, 1.05);
+    text-shadow: 2px 2px 2px #283440;
+}
+.site-description{
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    line-height: 150%;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1px;/*щоб слова розїжджались*/
+    text-shadow: 2px 2px 2px #283440;
+}
+.site-title-buttons{
+    margin-top: 38px;
+}
+.main-btn{
+padding: 16px 42px;
+border: 1px solid #d0a670;
+color: #d0a670;
+border-radius: 5px;
+font-size: 14px;
+letter-spacing: 1px;
+background-color: transparent;
+cursor: pointer;
+}
+.accent-btn{
+    background-color: #d0a670;
+    color: white;
+    margin-left: 18px;
+}
+/*контейнер для всіх статей блогу*/
+.blog-container{
+    margin: 30px auto 0 auto;
+    width: 70%;
+    display: grid;
+    grid-template-areas:
+    "deserts recipes breakfast"
+    "blog blog sidebar";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 70px;
+}
+/*три блоки*/
+.feature-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 10px 15px;
+}
+.deserts{
+    grid-area: deserts;
+}
+.recipes{
+    grid-area: recipes;
+}
+.breakfast{
+    grid-area: breakfast;
+}
+
+.fa-ice-cream,
+.fa-hamburger,
+.fa-utensils{
+    color: #d0a670;
+    font-size: 90px;
+    padding-bottom: 12px;
+}
+.feature-block-title{
+    display: flex;
+    justify-content: center;
+}
+.name-feature{
+    font-weight: 600;
+    font-size: 21px;
+    position: relative;
+    margin-bottom: 14px;
+}
+.feature-block-underline{
+    border-bottom: 2px solid #d0a670;
+    position: absolute;
+    width: 60px;
+    margin-top: 55px;
+}
+.feature-text{
+    color: #828282;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+}
+/*7 днів*/
+.food-blog{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    grid-area: blog;
+}
+.blog-post{
+    background-color: white;
+}
+.blog-post-img{
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+}
+.blog-post-body{
+    padding: 0 15px 15px 15px;
+}
+.blog-post-title{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 0;
+}
+.blog-post-subtitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.post-subtitle{
+    font-weight: 300;
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 14px;
+}
+.post-subtitle-underline{
+    position: absolute; 
+    border-bottom: 3px solid #d0a670; /*нижня границя блоку*/
+    width: 60px; /*ширина*/
+    margin-top: 38px;
+}
+.post-text{
+    color: #828282;
+    font-size: 14px; /* розмір шрифта*/
+    line-height: 22px; /*висота рядка*/
+    margin: 10px 0;
+}
+/*блок з права*/
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    gap: 30px; /*відступ між блоками*/
+}
+.sidebar-block{
+    background-color: white;
+    padding: 20px;
+}
+.sidebar-block-title{
+    position: relative;
+}
+.sidebar-title{
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.sidebar-block-underline{
+    border-bottom: 2px solid #d0a670;
+    position: absolute;
+    width: 45px;
+    margin-top: 5px;
+}
+/*5 блоків з текстом*/
+.popular-post-item{
+margin-top: 30px;
+display: flex;
+align-items: center; /*суне елемент по висоті*/
+gap: 10px;
+border-bottom: 1px solid #eeeeee;
+padding-bottom: 10px;
+}
+.no-border{
+    border-bottom: none;
+}
+.popular-post-img{
+    width: 55px;
+    height: 55px;
+}
+.post-title{
+    font-weight: 300;
+    font-size: 14px;
+    transform:scale(1, 1.1) ; /*розтягуємо текст на 10% у верх*/
+    color: #8d8d8d;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.popilar-item-text{
+    color: #4a4a4a;
+    font-size: 14px;
+    line-height: 150%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/*іконки*/
+.sidebar-social-icons{
+    margin-top: 25px;
+    text-align: center;
+}
+/*блок реклами*/
+.ad-block{
+    width: 280px;
+    height: 300px;
+    border: thick double #d0a670; /*межа блоку*/
+    margin-top: 25px;
+    display: flex;/* модуль для розміщення на сторінці*/
+    flex-direction: column;/*напрямок елементів колонка чи ряд*/
+    justify-content: center;/*вирівнювання по горизонталі*/
+    align-items: center;/*вирівнювання по вертикалі*/
+    color: #d0a670;
+}
+
+
+/*footer*/
+
+.footer {
+    background-color: #283440;
+    width: 100% ;
+    padding: 45px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+.footer-container {
+    display: flex; /*модуль для розміщення елементів на сторінці*/
+    margin: 0 auto;
+    width: 70%;
+    justify-content: space-between; /*вирівняти блоки в середині контейнера заповнити вільним місцем*/
+    gap: 24px;
+}
+.footer-block {
+    color: #8d8d8d;
+    display: flex; 
+    flex-flow: column wrap;
+}
+.footer-block a {
+    color: #d0a670;
+    text-decoration: none;
+}
+.footer-block > p,
+.footer-block > a {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.footer-block-title {
+    color: white;
+    position: relative;
+    margin-bottom: 14px;
+}
+.footer-block-underline {
+    border-bottom: white 2px solid;
+    position: absolute;
+    width: 50px;
+    margin-top: -10px;
+}
+.fa-phone,
+.fa-envelope {
+    color: #d0a670;
+    font-size: 14px;
+    margin-right: 14px;
+}
+/* блок з іконками*/
+.social-icon {
+    margin-right: 12px;
+}
+
+.fa-facebook,
+.fa-instagram-square,
+.fa-youtube,
+.fa-telegram {
+    color: #d0a670;
+    font-size: 28px;
+    margin-bottom: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+.fa-facebook:hover,
+.fa-facebook:focus {
+    color: darkgoldenrod;
+}
+.fa-instagram-square:hover,
+.fa-instagram-square:focus {
+    color: darkgoldenrod ;
+}
+.fa-youtube:hover,
+.fa-youtube:focus {
+    color: darkgoldenrod;
+}
+.fa-telegram:focus,
+.fa-telegram:hover {
+    color: darkgoldenrod;
+}
+
+/*підписка*/
+.subscribe-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+}
+.email-form {
+    text-indent: 10px;
+    border-radius: 5px;
+    height: 28px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+.subscribe-button {
+background-color: #d0a670;
+color: white;
+font-size: 14px;
+transition: all 0.2s ease-in-out;
+border-radius: 5px;
+border: none;
+padding: 4px 24px 6px 24px;
+}
+.subscribe-button:hover,
+.subscribe-button:focus {
+    background-color: darkgoldenrod;
+}
+.copyright {
+    color: #8d8d8d;
+    text-align: center;
+    margin-top: 16px;
+}
